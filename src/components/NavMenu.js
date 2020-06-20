@@ -6,7 +6,7 @@ const NavMenu = () => {
     setTimeout(() => {
         let content = document.querySelector(".nav-menu");
         content.classList.remove('hidden');
-        console.log(content)
+        // console.log(content)
     }, 2000)
 
     return (
