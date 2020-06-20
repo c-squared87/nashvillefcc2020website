@@ -2,6 +2,8 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Box from "./Box";
 import Events from "./Events";
+import About from "./About";
+import Sponsor from "./Sponsor";
 
 //James:
 //"/" is considered the homepage where Box.js displays.
@@ -22,6 +24,18 @@ const ApplicationViews = () => {
         path="/events"
         render={props => {
           return <Events />;
+        }}
+      />
+      <Route
+        path="/about"
+        render={props => {
+          return <About />;
+        }}
+      />
+      <Route
+        path="/sponsor"
+        render={props => {
+          return <Sponsor />;
         }}
       />
     </React.Fragment>
