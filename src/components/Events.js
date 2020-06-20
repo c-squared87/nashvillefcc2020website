@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react"
 import EventCard from './EventCard'
 import EventManager from '../Helpers/EventManager'
+import PageTitle from './PageTitle'
+import NavMenu from './NavMenu'
 
 const Events = () => {
     //States
@@ -20,10 +22,14 @@ const Events = () => {
     //The return simply maps the events into seperate cards. 
     //More options will be added later.
     return(
-        <div className = "card-containers">
-            {events.map(event => 
-            <EventCard key = {event.id} event = {event}/>
-            )}
+        <div>
+            <NavMenu />
+            <PageTitle title="Events" />
+            <div className = "card-containers">
+                {events.map(event => 
+                <EventCard key = {event.id} event = {event}/>
+                )}
+            </div>
         </div>
     )
 }

@@ -5,7 +5,7 @@ const Heading = () => {
     setTimeout(() => {
         let content = document.querySelector(".main-header");
         content.classList.add('hidden');
-        console.log(content)
+        // console.log(content)
     }, 800)
 
     return (
