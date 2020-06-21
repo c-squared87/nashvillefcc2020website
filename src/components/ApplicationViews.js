@@ -4,6 +4,7 @@ import Box from "./Box";
 import Events from "./Events";
 import About from "./About";
 import Sponsor from "./Sponsor";
+import NavMenu from './NavMenu'
 
 //James:
 //"/" is considered the homepage where Box.js displays.
@@ -12,33 +13,36 @@ import Sponsor from "./Sponsor";
 
 const ApplicationViews = () => {
   return (
-    <React.Fragment>
-      <Route
-        exact
-        path="/"
-        render={props => {
-          return <Box />;
-        }}
-      />
-      <Route
-        path="/events"
-        render={props => {
-          return <Events />;
-        }}
-      />
-      <Route
-        path="/about"
-        render={props => {
-          return <About />;
-        }}
-      />
-      <Route
-        path="/sponsor"
-        render={props => {
-          return <Sponsor />;
-        }}
-      />
-    </React.Fragment>
+    <div>
+      <NavMenu />
+      <React.Fragment>
+        <Route
+          exact
+          path="/"
+          render={props => {
+            return <Box />;
+          }}
+        />
+        <Route
+          path="/events"
+          render={props => {
+            return <Events />;
+          }}
+        />
+        <Route
+          path="/about"
+          render={props => {
+            return <About />;
+          }}
+        />
+        <Route
+          path="/sponsor"
+          render={props => {
+            return <Sponsor />;
+          }}
+        />
+      </React.Fragment>
+    </div>
   );
 };
 
