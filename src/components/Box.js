@@ -7,7 +7,6 @@ const Box = () =>{
     return (
         <div className="box">
             <Heading />
-            <NavMenu />
         </div>
     )
 }

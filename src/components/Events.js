@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react"
 import EventCard from './EventCard'
 import EventManager from '../Helpers/EventManager'
-import PageTitle from './PageTitle'
-import NavMenu from './NavMenu'
 
 const Events = () => {
     //States
@@ -12,7 +10,7 @@ const Events = () => {
     function fetchData() {
         return EventManager.getAll().then(results => {
             setEvents(results)
-        });      
+        });
     };
     //useEffect calls the data from the fetch
     useEffect(() => {
@@ -22,9 +20,10 @@ const Events = () => {
     //The return simply maps the events into seperate cards. 
     //More options will be added later.
     return(
-        <div>
-            <NavMenu />
-            <PageTitle title="Events" />
+        <div className="events-page">
+            <h1 className="page-header">Events</h1>
+            <div className="events-page__image w-full my-4 h-48 sm:h-64"></div>
+
             <div className = "card-containers">
                 {events.map(event => 
                 <EventCard key = {event.id} event = {event}/>

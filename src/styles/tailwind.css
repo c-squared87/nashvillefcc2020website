@@ -17887,7 +17887,18 @@ video {
   margin-bottom: 1rem;
 }
 
+.nav-menu .nav-menu__list li {
+  display: inline-block;
+}
+
 .about-page .about-page__image {
+  background-image: url("../img/ENwoNYxWwAAGybu.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.events-page .events-page__image {
   background-image: url("../img/ENwoNYxWwAAGybu.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
